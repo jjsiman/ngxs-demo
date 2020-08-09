@@ -1,0 +1,14 @@
+<form class="card" #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm.value)" >
+  <div class="card-body">
+    <div class="form-group">
+      <label for="contactName">Name</label>
+      <input type="text" class="form-control" id="contactName" name="name" [(ngModel)]="contact.name" required>
+    </div>
+    <div class="form-group">
+      <label for="contactNumber">Phone Number</label>
+      <input type="tel" class="form-control" id="contactNumber" name="number" [(ngModel)]="contact.number" required minlength="10" #tel="ngModel">
+      <div *ngIf="!tel.valid && tel.touched" class="invalid-feedback" style="display: block">Invalid format</div>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="contactForm.invalid">Add</button>
+  </div>
+</form>

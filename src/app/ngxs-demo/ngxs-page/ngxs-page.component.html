@@ -1,0 +1,26 @@
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <div class="col-4">
+      <div class="position-sticky sticky-top pb-1 pt-3 bg-white">
+        <h2>Contacts</h2>
+        <app-ngxs-form></app-ngxs-form>
+      </div>
+      <div class="contacts-container">
+        <div class="card mb-3" *ngFor="let contact of contacts$ | async; trackBy: trackContactByFn">
+          <div class="card-body">
+            <h5 class="card-title">{{ contact.name }}</h5>
+            <h6 class="card-subtitle text-muted">({{ contact.number + '' | slice:0:3 }})
+              {{ contact.number + '' | slice:3:6 }}-{{ contact.number + '' | slice:6:10 }}</h6>
+            <button class="btn btn-sm btn-outline-danger mt-3" (click)="removeContact(contact.id)">Remove</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="position-sticky sticky-top pt-3">
+        <h2>Add New Contact</h2>
+        <app-contact-form></app-contact-form>
+      </div>
+    </div>
+  </div>
+</div>
