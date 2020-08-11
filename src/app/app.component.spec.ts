@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'state-management-demo'`, () => {
+  it(`should have as title 'ngxs-demo'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('state-management-demo');
+    expect(app.title).toEqual('ngxs-demo');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('state-management-demo app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('ngxs-demo app is running!');
   });
 });

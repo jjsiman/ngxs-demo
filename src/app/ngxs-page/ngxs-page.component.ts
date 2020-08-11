@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Select, Store } from '@ngxs/store';
-import { DemoState } from '../state/demo.state';
+import { DemoState } from '../shared/state/demo.state';
 import { Observable } from 'rxjs';
 import { ContactItem } from 'src/app/shared/app.model';
-import { RemoveContact } from '../state/demo.actions';
+import { RemoveContact } from '../shared/state/demo.actions';
 
 @Component({
   selector: 'app-ngxs-page',

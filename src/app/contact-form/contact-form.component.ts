@@ -1,8 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { ContactItem } from 'src/app/shared/app.model';
 import { Store } from '@ngxs/store';
-import { AddContact } from '../state/demo.actions';
+import { AddContact } from '../shared/state/demo.actions';
 
 @Component({
   selector: 'app-contact-form',
